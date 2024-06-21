@@ -1,0 +1,51 @@
+.hero h1 {
+    color: rgba(225,225,225, .01);
+    background-image: url("../images/svg/texture-bg.svg");
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    animation: animate 15s ease-in-out infinite;
+    text-transform: uppercase;
+    -webkit-animation: animate 15s ease-in-out infinite;
+}
+
+
+@keyframes animate {
+    0%, 100% {
+        background-position: left top;
+    }
+    25%{
+        background-position: right bottom;
+    }
+    50% {
+        background-position: left bottom;
+    }
+    75% {
+        background-position: right top;
+    }   
+} 
+
+.tagline p {
+    font-weight: 900 !important;
+    background: linear-gradient(
+        to right,
+        #FCA21100 20%,
+        #fca311 30%,
+        #14213d 70%,
+        #FCA21100 80%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textAnimate 5s ease-in-out infinite alternate;
+}
+
+@keyframes textAnimate {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
