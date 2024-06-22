@@ -9,13 +9,13 @@ const Navbar = () => {
             <div className="container mx-auto">
                 <div className="flex justify-between items-center py-[25px]">
                     {/* Logo */}
-                    <div className="text-xl font-bold">
+                    <div className="text-2xl font-bold">
                         <a href="/" className="text-primary">Sea Salon</a>
                     </div>
                     {/* Desktop Menu */}
                     <div className="items-center hidden space-x-8 md:flex">
                         <div className="relative">
-                            <button onClick={() => setIsMenuService(!isMenuService)} className="flex items-center font-bold transition-all text-primary hover:text-secondary">
+                            <button onClick={() => setIsMenuService(!isMenuService)} className="flex items-center text-lg font-bold transition-all text-primary hover:text-secondary">
                                 Service
                                 <svg className="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -23,13 +23,18 @@ const Navbar = () => {
                             </button>
                             {isMenuService && (
                                 <div className="absolute right-0 w-48 mt-2 bg-white border border-gray-200 shadow-lg">
-                                    <a href="/service/haircut-styling" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Haircut & Styling</a>
+                                    <a href="/service/haircut-styling" className="block px-4 py-2 text-gray-800 text-md hover:bg-gray-200">Haircut & Styling</a>
                                     <a href="/service/manicure-pedicure" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Manicure & Pedicure</a>
                                     <a href="/service/facial-treatment" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Facial Treatment</a>
                                 </div>
                             )}
                         </div>
-                        <a href="#contact" className="font-bold transition-all text-primary hover:text-secondary">Contact</a>
+                        <a href="#contact" className="text-lg font-bold transition-all text-primary hover:text-secondary">Contact</a>
+                        <a href="/login">
+                            <button className="px-[40px] py-3 text-lg font-bold rounded-lg bg-secondary">
+                                Login
+                            </button>
+                        </a>
                     </div>
                     {/* Mobile Menu Button */}
                     <div className="md:hidden">
@@ -44,21 +49,27 @@ const Navbar = () => {
                 {/* Mobile Menu */}
                 {isMenuOpen && (
                     <div className="md:hidden">
-                        <a href="#" className="block px-4 py-2 text-black hover:bg-gray-200">Menu A</a>
                         <div className="relative">
                             <button onClick={() => setIsMenuService(!isMenuService)} className="flex items-center w-full px-4 py-2 text-left text-black hover:bg-gray-200">
-                                Menu B
+                                Service
                                 <svg className="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                                 </svg>
                             </button>
                             {isMenuService && (
-                                <div className="bg-white border-t border-gray-200 shadow-lg">
-                                    <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Submenu 1</a>
-                                    <a href="#" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Submenu 2</a>
+                                <div className="transition-all bg-white border-t border-gray-200 shadow-lg">
+                                    <a href="/service/haircut-styling" className="block px-4 py-2 text-gray-800 text-md hover:bg-gray-200">Haircut & Styling</a>
+                                    <a href="/service/manicure-pedicure" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Manicure & Pedicure</a>
+                                    <a href="/service/facial-treatment" className="block px-4 py-2 text-gray-800 hover:bg-gray-200">Facial Treatment</a>
                                 </div>
                             )}
                         </div>
+                        <a href="#contact" className="block px-4 py-2 text-black hover:bg-gray-200">Contact</a>
+                        <a href="/login">
+                            <button className="px-[40px] py-3 text-lg font-bold rounded-lg bg-secondary">
+                                Login
+                            </button>
+                        </a>
                     </div>
                 )}
             </div>

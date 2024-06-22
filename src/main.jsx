@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import App from './App.jsx'
-import Care from './pages/service/care.jsx'
-import Hair from './pages/service/haircut.jsx'
-import Facial from './pages/service/facial.jsx'
+import Service from './pages/service.jsx'
+import Login from './pages/auth/login.jsx'
+import Register from './pages/auth/register.jsx'
 import Notfound from './pages/404.jsx'
 import './index.css'
 
@@ -15,16 +15,16 @@ const router  = createBrowserRouter([
     element: <App />
   }, 
   {
-    path: "/service/haircut-styling",
-    element: <Hair />
+    path: "/service",
+    element: <Service />
   },
   {
-    path: "/service/manicure-pedicure",
-    element: <Care />
+    path: "/login",
+    element: <Login />
   },
   {
-    path: "/service/facial-treatment",
-    element: <Facial />
+    path: "/register",
+    element: <Register />
   },
   {
     path: "*",
