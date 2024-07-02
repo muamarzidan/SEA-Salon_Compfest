@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 import App from './App.jsx'
-import Service from './pages/service.jsx'
+import Service from './pages/services/index.jsx'
+import DetailedService from './pages/services/detail.jsx';
 import Login from './pages/auth/login.jsx'
 import Register from './pages/auth/register.jsx'
 import Notfound from './pages/404.jsx'
+import Dashboard from './pages/dashboard/index.jsx'
 import './index.css'
 
 const router  = createBrowserRouter([
@@ -19,12 +21,20 @@ const router  = createBrowserRouter([
     element: <Service />
   },
   {
+    path: "/service/:serviceId",
+    element: <DetailedService />
+  },
+  {
     path: "/login",
     element: <Login />
   },
   {
     path: "/register",
     element: <Register />
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard />
   },
   {
     path: "*",
