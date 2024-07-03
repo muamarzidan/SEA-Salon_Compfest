@@ -16,11 +16,11 @@ export default function Homepage() {
                         </div>
                         <h1 className="!font-black leading-snug text-center text-[200px]">Sea Salon</h1>
                         <button className="px-[40px] py-3 font-bold text-lg rounded-lg bg-secondary">
-                            Explore
+                            <a href="#tagline">Explore</a>
                         </button>
                     </div>
                 </section>
-                <section id="tagline" className={`${styles.tagline} tagline w-full h-[200px] bg-primary`}>
+                <section id="tagline" className={`${styles.tagline} tagline w-full h-[200px] mb-[200px] bg-primary`}>
                     <div className="flex flex-col items-center justify-center w-full h-full">
                         <p className="p-3 italic font-black text-center text-gray-500 text-7xl">Beauty and Elegance Redefined</p>
                     </div>
