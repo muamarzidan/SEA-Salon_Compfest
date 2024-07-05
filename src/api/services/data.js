@@ -3,7 +3,7 @@ export default [
         id: 1, 
         nameService: "Haircuts and Styling",
         typeService: "hair", 
-        thumbnail: "/src//assets/images/hair-thumbnail.jpg",
+        thumbnail: "/src/assets/images/hair-thumbnail.jpg",
         description : "This is a description",
         price: 150000,
         rating: 0,
