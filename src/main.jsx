@@ -16,40 +16,64 @@ import bringAuth from './hoc/auth.js';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />
+    element: (
+      <AuthProvider>
+        <App />
+      </AuthProvider>
+    ),
   },
   {
     path: "/service",
-    element: <Service />
+    element: (
+      <AuthProvider>
+        <Service />
+      </AuthProvider>
+    ),
   },
   {
     path: "/service/:serviceId",
-    element: <DetailedService />
+    element: (
+      <AuthProvider>
+        <DetailedService />
+      </AuthProvider>
+    ),
   },
   {
     path: "/login",
-    element: <Login />
+    element: (
+      <AuthProvider>
+        <Login />
+      </AuthProvider>
+    ),
   },
   {
     path: "/register",
-    element: <Register />
+    element: (
+      <AuthProvider>
+        <Register />
+      </AuthProvider>
+    ),
   },
   {
     path: "/dashboard",
-    element: bringAuth(Dashboard)
+    element: (
+      <AuthProvider>
+        {React.createElement(bringAuth(Dashboard))}
+      </AuthProvider>
+    ),
   },
   {
     path: "*",
-    element: <Notfound />
+    element: (
+      <AuthProvider>
+        <Notfound />
+      </AuthProvider>
+    ),
   }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}>
-      <AuthProvider>
-        <App />
-      </AuthProvider>
-    </RouterProvider>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
