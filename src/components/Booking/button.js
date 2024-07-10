@@ -1,4 +1,3 @@
-// src/components/buttonBooking.js
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import axiosInstance from '../../utils/axiosInstance';
