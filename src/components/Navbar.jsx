@@ -33,7 +33,7 @@ const Navbar = () => {
     }, [navigate, setIsLoggedIn]);
 
     const handleLogout = () => {
-        localStorage.removeItem('token');
+        localStorage.removeItem('token');   
         setIsLoggedIn(false);
     };
 
